@@ -2,11 +2,17 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: username
+  - name: dream
     prompt: what is your Dream?
     private: false
+  - name: code
+    prompt: what is your lucky code?
+    private: true
   tasks:
   - name: Assessment of Goal fulfillment
     ansible.builtin.debug:
-      msg: " Hi, Your Dream {{username}} is reacheable if your are confident enough and hardworking!!! "
+      msg: " Hi, Your Dream {{dream }} is reacheable if your are confident enough and hardworking!!! "
+  - name: Lucky code
+    ansible.builtin.debug:
+      msg: " Hi, Your lucky code : {{ code }}  "
       
