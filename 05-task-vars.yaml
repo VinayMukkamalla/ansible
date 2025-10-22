@@ -8,7 +8,7 @@
   tasks:
   - name: print the course information
     vars: 
-      COURSE: AWS cloud && Devops
+      COURSE: Devops with AWS
     ansible.builtin.debug:
       msg: " course name is : {{ COURSE }}, Duration : {{ DURATION }}, Trained by : {{ TRAINER }} "
   
