@@ -8,3 +8,6 @@
       msg: " course name is : {{ COURSE }}, Duration : {{ DURATION }}, Trained by : {{ TRAINER }} "
 
 
+
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 
+# -e "COURSE='AWS with ME'" -e "DURATION='3 months'" -e "TRAINER='Vinay Mukkamalla'" 09-vars-args.yaml
