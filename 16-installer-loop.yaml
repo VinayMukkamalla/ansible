@@ -1,0 +1,14 @@
+- name: package installing play
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: install looped packages
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: install
+    loop:
+    - nginx
+    - zip
+    - tree
+    - mysql
