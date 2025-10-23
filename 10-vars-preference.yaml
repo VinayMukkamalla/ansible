@@ -5,10 +5,10 @@
     NAME: play level variable
   # vars_files:
   #   - course.yaml
-  vars_prompt:
-    - name: NAME
-      prompt: what is your name?
-      private: false
+  # vars_prompt:
+  #   - name: NAME
+  #     prompt: what is your name?
+  #     private: false
   tasks:
   - name: testing variable preference
     # vars:
@@ -20,4 +20,6 @@
 #list of preferences
 # 1. command line args
 # 2. task level variables
-# 3. variables from files called at play level
+#play level variables:
+# 3. variables from files called at play level(vars_files)
+# 4. from prompt(vars_prompt) at play level
