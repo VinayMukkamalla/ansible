@@ -24,3 +24,4 @@
 # 3. variables from files called at play level(vars_files)
 # 4. from prompt(vars_prompt) at play level
 # 5. play level variable (vars)
+# 6. variable from inventory file

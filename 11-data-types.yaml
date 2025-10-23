@@ -1,0 +1,18 @@
+- name: Data types play
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "Devops with AWS" #string type variabe
+    DURATION: 120 # number 
+    is_live: true # boolean
+    tools: # list can be defined like this also --> ["linux", "shell", "ansible"]
+    - linux
+    - shell
+    - ansible
+    concepts: # dictionary or map
+      cloud: AWS
+      cm: ansible # cm config management
+    tasks:
+    - name: print course info
+      ansible.builtin.debug:
+        msg: "course name: {{ COURSE }}, Duration is : {{ DURATION }} hrs, is it live :{{ is_live }}, tools used are : {{ tools }}, concepts covered are : {{ concepts }}"
