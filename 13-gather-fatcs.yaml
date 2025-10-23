@@ -4,5 +4,5 @@
   # before executing any tasks on a remote server ansible will first collect information about the remote|target server and understands the server status  
   tasks:
   - name: facts
-    ansible.builtin.package:
+    ansible.builtin.debug:
       msg: " {{ ansible_facts }} "
