@@ -1,12 +1,14 @@
 - name: conditions play
   hosts: local
   connection: local
-  vars_prompt:
-    - name: number
-      prompt: "Enter a number to check it is less than 10 or not "
-      private: false
+  # vars_prompt: it is failing because it is taking input as string
+  #   - name: number
+  #     prompt: "Enter a number to check it is less than 10 or not "
+  #     private: false
+  vars:
+    number: 5
   tasks:
   - name: check whether number is less than 10 or not 
     ansible.builtin.debug:
       msg: " given  number {{ number }} is less than 10 "
-    when: {{ number}} < 10
+    when: number < 10
