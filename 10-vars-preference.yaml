@@ -1,8 +1,8 @@
 - name: variable preference order
   hosts: local
   connection: local
-  vars:
-    NAME: play level variable
+  # vars:
+  #   NAME: play level variable
   # vars_files:
   #   - course.yaml
   # vars_prompt:
@@ -23,3 +23,4 @@
 #play level variables:
 # 3. variables from files called at play level(vars_files)
 # 4. from prompt(vars_prompt) at play level
+# 5. play level variable (vars)
