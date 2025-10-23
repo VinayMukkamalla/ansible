@@ -1,6 +1,7 @@
 - name: using modules based on ansible_facts or  gather facts
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: install nginx if OS is RedHat
     ansible.builtin.dnf:
