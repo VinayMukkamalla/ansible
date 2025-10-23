@@ -6,7 +6,7 @@
   - name: install looped packages
     ansible.builtin.package:
       name: "{{ item }}"
-      state: install
+      state: installed
     loop:
     - nginx
     - zip
