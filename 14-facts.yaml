@@ -1,0 +1,15 @@
+- name: using modules based on ansible_facts or  gather facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: install nginx if OS is RedHat
+    ansible.builtin.dnf:
+      name: nginx
+      state: latest
+    when: ansible_os_family == "RedHat"
+
+  - name: Install nginx if OS is Ubuntu
+    ansible.builtin.apt:
+      name: nginx
+      state: latest
+    when: ansible_os_family == "Debian"
