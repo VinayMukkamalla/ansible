@@ -12,7 +12,7 @@
     concepts: # dictionary or map
       cloud: AWS
       cm: ansible # cm config management
-    tasks:
-    - name: print course info
-      ansible.builtin.debug:
-        msg: "course name: {{ COURSE }}, Duration is : {{ DURATION }} hrs, is it live :{{ is_live }}, tools used are : {{ tools }}, concepts covered are : {{ concepts }}"
+  tasks:
+  - name: print course info
+    ansible.builtin.debug:
+      msg: "course name: {{ COURSE }}, Duration is : {{ DURATION }} hrs, is it live :{{ is_live }}, tools used are : {{ tools }}, concepts covered are : {{ concepts }}"
