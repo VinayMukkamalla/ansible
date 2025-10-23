@@ -14,3 +14,7 @@
       name: nginx
       state: latest
     when: ansible_os_family == "Debian"
+
+
+
+    # we can use this feature of understanding target server and make decisions and write our own code or modules based on server facts by gathering facts (ansible_facts) understand existing configuration of server
