@@ -1,4 +1,4 @@
-- name: gather facts
+- name: Gather facts
   hosts: local
   connection: local
   # before executing any tasks on a remote server ansible will first collect information about the remote|target server and understands the server status  
