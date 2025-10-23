@@ -3,8 +3,8 @@
   connection: local
   vars:
     NAME: play level variable
-  vars_files:
-    - course.yaml
+  # vars_files:
+  #   - course.yaml
   vars_prompt:
     - name: NAME
       prompt: what is your name?
@@ -20,4 +20,4 @@
 #list of preferences
 # 1. command line args
 # 2. task level variables
-# 3. 
+# 3. variables from files called at play level
