@@ -61,5 +61,6 @@
   - name: ip address check
     ansible.builtin.debug:
       msg: "IP exists: {{ IPaddress |  ipaddr }}"
+      msg: "IP exists: {{ IPaddress |  ansible.utils.ipv4 }}"
 
 
