@@ -4,6 +4,8 @@
   vars:
     name: defining variable here  # eventhough name is a reserved keyword in ansible I am using it to practice
     technologies: Devops, linux, shell, ansible #string
+    gmail: VIshWas@2025AUGUST.cOm
+    IPaddress: 199.26.78.65
     #dictionary == map
     Tags:
       Application: payment
@@ -47,5 +49,17 @@
     ansible.builtin.copy:
       dest: ./student-data.json
       content: "{{student_yaml|to_nice_json}}"
+
+  - name: case to upper
+    ansible.builtin.debug:
+      msg: "TO upper: {{ name | to_upper }}"
+
+  - name: case to lower
+    ansible.builtin.debug:
+      msg: "TO lower: {{ gmail | to_lower }}"
+
+  - name: ip address check
+    ansible.builtin.debug:
+      msg: "IP exists: {{ IPaddress |  ipaddr }}"
 
 
