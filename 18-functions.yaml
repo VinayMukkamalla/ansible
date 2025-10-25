@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    name: defining variable here
+    name: defining variable here  # eventhough name is a reserved keyword in ansible I am using it to practice
   tasks:
   - name: default variable
     ansible.builtin.debug:
