@@ -52,11 +52,11 @@
 
   - name: case to upper
     ansible.builtin.debug:
-      msg: "TO upper: {{ name | to_upper }}"
+      msg: "TO upper: {{ name | upper }}"
 
   - name: case to lower
     ansible.builtin.debug:
-      msg: "TO lower: {{ gmail | to_lower }}"
+      msg: "TO lower: {{ gmail | lower }}"
 
   - name: ip address check
     ansible.builtin.debug:
