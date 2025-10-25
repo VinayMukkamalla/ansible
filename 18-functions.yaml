@@ -77,5 +77,14 @@
       msg: "{{ passwd }}"
 
 
+  - name: list the files in current path using command module
+    ansible.builtin.command: ls -ltr
+    register: show_files
+
+  - name: print the list of files
+    ansible.builtin.debug:
+      msg: "{{ show_files }}"
+
+
 
 
