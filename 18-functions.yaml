@@ -3,8 +3,25 @@
   connection: local
   vars:
     name: defining variable here  # eventhough name is a reserved keyword in ansible I am using it to practice
+    technologies: Devops, linux, shell, ansible #string
+    #dictionary == map
+    tags:
+      Application: payment
+      Environment: dev
   tasks:
   - name: default variable
     ansible.builtin.debug:
 #      msg: "Hello {{ name }}"   --> undefined variable
        msg: "Hello {{ name | default(' providing default Value for variable name if it is not defined')}}"
+
+  #string to list
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "Technologies are : {{ technologies | split(',') }}"
+  
+  #map to list
+  - name: convert map to list
+    ansible.builtin.debug:
+      msg: " tags are : {{ tags | dict2items }} "  # dict(dictionary or map ) 2 to items(list)
+
+      
