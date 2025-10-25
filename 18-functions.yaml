@@ -5,7 +5,7 @@
     name: defining variable here  # eventhough name is a reserved keyword in ansible I am using it to practice
     technologies: Devops, linux, shell, ansible #string
     gmail: VIshWas@2025AUGUST.cOm
-    IPaddress: 199.26.78.65
+    IPaddress: 281.26.78.65
     #dictionary == map
     Tags:
       Application: payment
