@@ -34,3 +34,12 @@
     ansible.builtin.debug:
       msg: "ListTags are {{ ListTags | items2dict}}"
 
+  # read yaml file in runtime and store it as a string into a variable
+  - name: read an entire yam file and store it in a variable
+    ansible.builtin.set_fact:
+      student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"                   # student.yaml --> filepath
+  
+  - name: convert yam to json
+    ansible.builtin.debug:
+      msg: "{{ student_yaml | to_json }}"
+
