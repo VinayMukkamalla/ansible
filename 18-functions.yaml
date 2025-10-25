@@ -60,13 +60,22 @@
 
   - name: ip address check
     ansible.builtin.debug:
-      msg: "IP exists: {{ IPaddress |  ipaddr }}"
+      msg: "IP exists: {{ IPaddress |  ipaddr }}" # you can use both this one and next on
       
   
   - name: check ip address
     ansible.builtin.debug:
       msg: "IP exists: {{ IPaddress |  ansible.utils.ipv4 }}"
 
+  # command vs shell ansible.builtin.shell for complex and tasks where variables redirections piping etc needed|| ansible.builtin.command for simple plane commands
+  - name: read /etc/passwd and grep by root and store output using register
+    ansible.builtin.shell: cat /etc/passwd | grep "root"
+    register: passwd
 
-      
+  - name: show output stored in register passwd
+    ansible.builtin.debug:
+      msg: "{{ passwd }}"
+
+
+
 
