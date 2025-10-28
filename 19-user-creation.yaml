@@ -15,3 +15,8 @@
   - name: create user based on output return code 
     ansible.builtin.command: useradd roboshop
     when: output.rc != 0
+
+
+    ### error handling : we will take output to a file using register and ignore errors and take necessary steps based on output
+
+    
